@@ -1,4 +1,3 @@
-
 import { Linkedin } from 'lucide-react';
 
 const Footer = () => {
@@ -9,9 +8,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/lovable-uploads/f9fd1225-357f-4466-950b-fbdff9000e66.png" 
+                src="/lovable-uploads/5eba8a70-e10e-4cd5-8394-2d1ff58de94d.png" 
                 alt="DBC Consultancy Logo" 
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
               <div>
                 <h3 className="text-2xl font-bold">DBC CONSULTANCY</h3>
