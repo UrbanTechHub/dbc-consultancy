@@ -1,3 +1,4 @@
+
 import { Linkedin } from 'lucide-react';
 
 const Footer = () => {
@@ -35,7 +36,6 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="text-gray-400 space-y-2">
               <p>info@dbcconsultancy.com</p>
-              <p>+44 20 7123 4567</p>
               <p>5 Brayford Square<br />London. E1 0SG</p>
             </div>
           </div>

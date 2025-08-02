@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import ServiceCard from '../components/ServiceCard';
 import { Building2, Fuel, Zap, Beaker, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const services = [
@@ -52,13 +53,17 @@ const Index = () => {
                 building construction, energy, utilities, and chemical industries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-blue-900 px-8 py-4 text-lg">
-                  Explore Our Services
-                  <ArrowRight size={20} className="ml-2" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white bg-transparent px-8 py-4 text-lg">
-                  Contact Us Today
-                </Button>
+                <Link to="/services">
+                  <Button size="lg" className="bg-white text-blue-900 px-8 py-4 text-lg hover:bg-gray-100 transition-colors">
+                    Explore Our Services
+                    <ArrowRight size={20} className="ml-2" />
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="border-white text-white bg-transparent px-8 py-4 text-lg hover:bg-white/10 transition-colors">
+                    Contact Us Today
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="hidden lg:block">
@@ -190,13 +195,17 @@ const Index = () => {
             and discover how we can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 px-8 py-4 text-lg">
-              Get Free Consultation
-              <ArrowRight size={20} className="ml-2" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white bg-transparent px-8 py-4 text-lg">
-              View Our Portfolio
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-white text-blue-600 px-8 py-4 text-lg hover:bg-gray-100 transition-colors">
+                Get Free Consultation
+                <ArrowRight size={20} className="ml-2" />
+              </Button>
+            </Link>
+            <Link to="/services">
+              <Button size="lg" variant="outline" className="border-white text-white bg-transparent px-8 py-4 text-lg hover:bg-white/10 transition-colors">
+                View Our Portfolio
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -132,7 +132,7 @@ const About = () => {
             <div className="bg-white rounded-xl shadow-lg p-6 text-center">
               <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
                 <img 
-                  src="/lovable-uploads/2a95bea7-c09d-48ab-8032-8ec67383fe5d.png"
+                  src="/lovable-uploads/0e54afd2-4b20-4e48-9e13-ac523830e90d.png"
                   alt="Henry Mason"
                   className="w-full h-full object-cover"
                 />
