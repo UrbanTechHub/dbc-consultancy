@@ -152,10 +152,13 @@ const PowerUtilities = () => {
             Let our power and utilities experts help you build resilient, efficient, 
             and sustainable electrical infrastructure for the future.
           </p>
-          <button className="bg-white text-yellow-600 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
+          <Link 
+            to="/contact" 
+            className="bg-white text-yellow-600 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center hover:bg-gray-100"
+          >
             Start Your Project
             <ArrowRight size={20} className="ml-2" />
-          </button>
+          </Link>
         </div>
       </div>
 
