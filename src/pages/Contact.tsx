@@ -1,7 +1,7 @@
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -104,17 +104,6 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-green-50 rounded-lg p-3">
-                    <Phone className="text-green-600" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+44 20 7123 4567</p>
-                    <p className="text-gray-600">+44 20 7987 6543</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
                   <div className="bg-purple-50 rounded-lg p-3">
                     <MapPin className="text-purple-600" size={24} />
                   </div>
@@ -124,17 +113,6 @@ const Contact = () => {
                       5 Brayford Square<br />
                       London. E1 0SG
                     </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-50 rounded-lg p-3">
-                    <Clock className="text-orange-600" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Business Hours</h3>
-                    <p className="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Saturday: 9:00 AM - 2:00 PM</p>
                   </div>
                 </div>
               </div>

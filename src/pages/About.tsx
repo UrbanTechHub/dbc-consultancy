@@ -12,7 +12,7 @@ const About = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About DBC Consultancy
+            About Us
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Leading the future of engineering excellence with innovative solutions 

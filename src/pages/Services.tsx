@@ -40,7 +40,7 @@ const Services = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Engineering Services
+            Our Services
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             DBC Consultancy delivers comprehensive civil engineering solutions across 
@@ -65,7 +65,7 @@ const Services = () => {
         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose DBC Consultancy Services?
+              Why Choose Us?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We combine decades of engineering expertise with cutting-edge technology 
