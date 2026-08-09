@@ -1,46 +1,56 @@
-import { Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Mail, MapPin, ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/lovable-uploads/5eba8a70-e10e-4cd5-8394-2d1ff58de94d.png" 
-                alt="DBC Consultancy Logo" 
-                className="h-12 w-auto"
+    <footer className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
+      <div className="absolute inset-0 grid-lines opacity-40" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-4">
+          <div className="md:col-span-2">
+            <div className="mb-5 flex items-center gap-3">
+              <img
+                src="/lovable-uploads/5eba8a70-e10e-4cd5-8394-2d1ff58de94d.png"
+                alt="DBC Consultancy logo"
+                className="h-11 w-auto"
+                loading="lazy"
               />
               <div>
-                <h3 className="text-2xl font-bold">DBC CONSULTANCY</h3>
-                <p className="text-sm text-gray-400">Engineering Excellence Delivered</p>
+                <p className="font-display text-lg font-bold tracking-wide">DBC CONSULTANCY</p>
+                <p className="text-xs uppercase tracking-[0.2em] opacity-70">Engineering Excellence Delivered</p>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed">
-              Leading civil engineering consultancy delivering innovative 
-              solutions across diverse industries worldwide.
+            <p className="max-w-md text-sm leading-relaxed opacity-80">
+              An independent civil and multidisciplinary engineering consultancy delivering precise,
+              buildable solutions for construction, energy, utilities and process industries.
             </p>
           </div>
+
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>Building & Construction</li>
-              <li>Oil, Gas & Energy</li>
-              <li>Power & Utilities</li>
-              <li>Chemicals & Petrochemicals</li>
+            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] opacity-70">Sectors</h4>
+            <ul className="space-y-3 text-sm opacity-90">
+              <li><Link to="/services/building-construction" className="transition-opacity hover:opacity-70">Building &amp; Construction</Link></li>
+              <li><Link to="/services/oil-gas-energy" className="transition-opacity hover:opacity-70">Oil, Gas &amp; Energy</Link></li>
+              <li><Link to="/services/power-utilities" className="transition-opacity hover:opacity-70">Power &amp; Utilities</Link></li>
+              <li><Link to="/services/chemicals-petrochemicals" className="transition-opacity hover:opacity-70">Chemicals &amp; Petrochemicals</Link></li>
             </ul>
           </div>
+
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="text-gray-400 space-y-2">
-              <p>info@dbcconsultancy.com</p>
-              <p>5 Brayford Square<br />London. E1 0SG</p>
-            </div>
+            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] opacity-70">Contact</h4>
+            <ul className="space-y-3 text-sm opacity-90">
+              <li className="flex items-start gap-2"><Mail size={16} className="mt-0.5 shrink-0" />info@dbcconsultancy.com</li>
+              <li className="flex items-start gap-2"><MapPin size={16} className="mt-0.5 shrink-0" /><span>5 Brayford Square<br />London, E1 0SG</span></li>
+            </ul>
+            <Link to="/contact" className="mt-5 inline-flex items-center gap-1 text-sm font-medium underline underline-offset-4">
+              Start a conversation <ArrowUpRight size={15} />
+            </Link>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 DBC CONSULTANCY. All rights reserved.</p>
+
+        <div className="mt-14 flex flex-col gap-3 border-t border-primary-foreground/15 pt-6 text-xs opacity-70 sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; {new Date().getFullYear()} DBC Consultancy. All rights reserved.</p>
+          <p>Registered in England &amp; Wales</p>
         </div>
       </div>
     </footer>
