@@ -1,211 +1,213 @@
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ServiceCard from '../components/ServiceCard';
-import { Building2, Fuel, Zap, Beaker, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import {
+  Building2,
+  Fuel,
+  Zap,
+  Beaker,
+  ArrowUpRight,
+  ShieldCheck,
+  Ruler,
+  Globe2,
+  Users,
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Index = () => {
-  const services = [
-    {
-      title: "Building & Construction",
-      description: "Comprehensive structural engineering solutions for residential, commercial, and industrial construction projects of all scales.",
-      icon: <Building2 className="text-blue-600" size={28} />,
-      link: "/services/building-construction"
-    },
-    {
-      title: "Oil, Gas & Energy", 
-      description: "Advanced engineering solutions for upstream, midstream, and downstream operations in the oil, gas, and renewable energy sectors.",
-      icon: <Fuel className="text-orange-600" size={28} />,
-      link: "/services/oil-gas-energy"
-    },
-    {
-      title: "Power & Utilities",
-      description: "Comprehensive engineering solutions for power generation, transmission, distribution, and utility infrastructure projects worldwide.",
-      icon: <Zap className="text-yellow-600" size={28} />,
-      link: "/services/power-utilities"
-    },
-    {
-      title: "Chemicals & Petrochemicals",
-      description: "Specialized engineering solutions for chemical processing, petrochemical manufacturing, and specialty chemical production facilities.",
-      icon: <Beaker className="text-purple-600" size={28} />,
-      link: "/services/chemicals-petrochemicals"
-    }
-  ];
+const services = [
+  {
+    title: 'Building & Construction',
+    description:
+      'Structural and civil design for residential, commercial and industrial developments, from concept to construction support.',
+    icon: <Building2 size={26} />,
+    link: '/services/building-construction',
+    index: '01',
+  },
+  {
+    title: 'Oil, Gas & Energy',
+    description:
+      'Upstream, midstream and downstream engineering, including facility design, integrity and renewable energy integration.',
+    icon: <Fuel size={26} />,
+    link: '/services/oil-gas-energy',
+    index: '02',
+  },
+  {
+    title: 'Power & Utilities',
+    description:
+      'Generation, transmission, distribution and utility infrastructure engineering delivered to grid-code standards.',
+    icon: <Zap size={26} />,
+    link: '/services/power-utilities',
+    index: '03',
+  },
+  {
+    title: 'Chemicals & Petrochemicals',
+    description:
+      'Process and plant engineering for chemical, petrochemical and specialty production facilities.',
+    icon: <Beaker size={26} />,
+    link: '/services/chemicals-petrochemicals',
+    index: '04',
+  },
+];
 
+const stats = [
+  { value: '25+', label: 'Years of combined practice' },
+  { value: '4', label: 'Core engineering sectors' },
+  { value: '100%', label: 'Chartered-led delivery' },
+];
+
+const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-center">
-                Engineering Excellence
-                <span className="block text-blue-300">Delivered Globally</span>
+
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
+        <div className="absolute inset-0 grid-lines opacity-50" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <div className="grid items-center gap-14 lg:grid-cols-12">
+            <div className="animate-fade-up lg:col-span-7">
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-1.5 text-[11px] uppercase tracking-[0.22em]">
+                London based · Delivering globally
+              </span>
+              <h1 className="mt-7 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
+                Engineering clarity for
+                <span className="block text-primary-foreground/70">complex infrastructure.</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-2xl leading-relaxed opacity-90">
-                DBC Consultancy provides world-class civil engineering solutions across 
-                building construction, energy, utilities, and chemical industries.
+              <p className="mt-6 max-w-xl text-base leading-relaxed opacity-85 sm:text-lg">
+                DBC Consultancy provides civil, structural and multidisciplinary engineering
+                consultancy across construction, energy, utilities and process industries — precise
+                documentation, buildable design, dependable delivery.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/services">
-                  <Button size="lg" className="bg-white text-blue-900 px-8 py-4 text-lg hover:bg-gray-100 transition-colors">
-                    Explore Our Services
-                    <ArrowRight size={20} className="ml-2" />
-                  </Button>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-foreground px-7 py-3.5 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5"
+                >
+                  Explore our services <ArrowUpRight size={17} />
                 </Link>
-                <Link to="/contact">
-                  <Button size="lg" variant="outline" className="border-white text-white bg-transparent px-8 py-4 text-lg hover:bg-white/10 transition-colors">
-                    Contact Us Today
-                  </Button>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/35 px-7 py-3.5 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
+                >
+                  Speak to an engineer
                 </Link>
               </div>
-            </div>
-            <div className="hidden lg:block">
-              <img 
-                src="/lovable-uploads/803c0534-f6e5-49a5-8c5f-f75147bd6253.png"
-                alt="Construction engineers reviewing building plans on site"
-                className="rounded-2xl shadow-2xl w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Engineering Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive engineering solutions across diverse industries, 
-              delivered with precision and innovation.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-                link={service.link}
-              />
-            ))}
-          </div>
+              <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-primary-foreground/15 pt-8">
+                {stats.map((s) => (
+                  <div key={s.label}>
+                    <dt className="font-display text-2xl font-bold sm:text-3xl">{s.value}</dt>
+                    <dd className="mt-1 text-[11px] uppercase tracking-[0.15em] opacity-70">{s.label}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
 
-          {/* Engineering Expertise Visual */}
-          <div className="mt-16 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <img 
-                  src="/lovable-uploads/cba7d778-46b8-4f2a-ad19-1a8bff264bec.png"
-                  alt="Engineering professionals collaborating on construction project"
-                  className="rounded-xl shadow-lg w-full h-auto"
+            <div className="lg:col-span-5">
+              <div className="relative">
+                <div className="absolute -inset-3 rounded-3xl bg-primary-foreground/5" aria-hidden="true" />
+                <img
+                  src="/lovable-uploads/803c0534-f6e5-49a5-8c5f-f75147bd6253.png"
+                  alt="Engineers reviewing construction drawings on a project site"
+                  className="relative rounded-2xl shadow-elevated"
+                  loading="lazy"
                 />
               </div>
-              <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">Professional Excellence</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  Our experienced team of engineers brings together decades of expertise 
-                  in civil engineering, project management, and innovative design solutions. 
-                  We collaborate closely with clients to ensure every project meets the 
-                  highest standards of quality and safety.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <CheckCircle className="text-green-500 mr-3" size={20} />
-                    <span className="text-gray-700">Certified Professional Engineers</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="text-green-500 mr-3" size={20} />
-                    <span className="text-gray-700">Industry-Leading Safety Standards</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="text-green-500 mr-3" size={20} />
-                    <span className="text-gray-700">Innovative Design Solutions</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose DBC Consultancy?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine technical expertise with innovative thinking to deliver 
-              exceptional engineering solutions that exceed expectations.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              <div className="bg-blue-50 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                <Award className="text-blue-600" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Technical Excellence</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Our team of expert engineers delivers cutting-edge solutions 
-                using the latest technologies and industry best practices.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              <div className="bg-green-50 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                <Users className="text-green-600" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Collaborative Approach</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We work closely with clients throughout every project phase, 
-                ensuring clear communication and aligned objectives.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              <div className="bg-purple-50 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                <CheckCircle className="text-purple-600" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Proven Results</h3>
-              <p className="text-gray-600 leading-relaxed">
-                With a track record of successful projects across multiple 
-                industries, we deliver reliable solutions on time and on budget.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
-          <p className="text-xl mb-8 leading-relaxed opacity-90">
-            Connect with our engineering experts to discuss your unique requirements 
-            and discover how we can bring your vision to life.
+      {/* Bento capabilities */}
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div className="max-w-2xl">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">Capabilities</span>
+          <h2 className="mt-4 text-3xl font-bold text-foreground sm:text-4xl">
+            Four disciplines, one delivery standard
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Every commission is led by chartered engineers and supported by rigorous design review,
+            so the drawings you receive are the drawings that get built.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-white text-blue-600 px-8 py-4 text-lg hover:bg-gray-100 transition-colors">
-                Get Free Consultation
-                <ArrowRight size={20} className="ml-2" />
-              </Button>
-            </Link>
-            <Link to="/services">
-              <Button size="lg" variant="outline" className="border-white text-white bg-transparent px-8 py-4 text-lg hover:bg-white/10 transition-colors">
-                View Our Portfolio
-              </Button>
-            </Link>
+        </div>
+
+        <div className="mt-12 grid gap-5 md:grid-cols-3 lg:grid-cols-4">
+          {/* Feature tile */}
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-accent p-8 text-accent-foreground shadow-soft md:col-span-3 lg:col-span-2 lg:row-span-2">
+            <div className="absolute inset-0 grid-lines opacity-40" aria-hidden="true" />
+            <div className="relative flex h-full flex-col justify-between">
+              <div>
+                <Ruler size={30} />
+                <h3 className="mt-6 text-2xl font-bold sm:text-3xl">Design assurance built into every stage</h3>
+                <p className="mt-4 max-w-md text-sm leading-relaxed opacity-90">
+                  Concept studies, detailed design, technical due diligence and site support —
+                  coordinated in one accountable workflow with transparent reporting.
+                </p>
+              </div>
+              <Link
+                to="/about"
+                className="mt-8 inline-flex items-center gap-1 text-sm font-semibold underline underline-offset-4"
+              >
+                How we work <ArrowUpRight size={16} />
+              </Link>
+            </div>
+          </div>
+
+          {services.map((s) => (
+            <ServiceCard key={s.title} {...s} />
+          ))}
+
+          <div className="rounded-2xl border border-border bg-gradient-surface p-6 shadow-soft md:col-span-3 lg:col-span-2">
+            <div className="flex flex-wrap gap-6">
+              {[
+                { icon: <ShieldCheck size={20} />, title: 'Safety-first standards', text: 'CDM-aligned processes and independent design checks.' },
+                { icon: <Globe2 size={20} />, title: 'International reach', text: 'Projects delivered across UK, EMEA and West Africa.' },
+                { icon: <Users size={20} />, title: 'Collaborative teams', text: 'Embedded with client, contractor and stakeholder teams.' },
+              ].map((f) => (
+                <div key={f.title} className="min-w-[180px] flex-1">
+                  <div className="mb-3 inline-flex rounded-lg bg-card p-2.5 text-accent shadow-soft">{f.icon}</div>
+                  <h4 className="text-sm font-semibold text-foreground">{f.title}</h4>
+                  <p className="mt-1 text-sm text-muted-foreground">{f.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-soft md:col-span-3 lg:col-span-2">
+            <img
+              src="/lovable-uploads/cba7d778-46b8-4f2a-ad19-1a8bff264bec.png"
+              alt="Engineering professionals collaborating on a construction project"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-hero px-6 py-16 text-center text-primary-foreground sm:px-12">
+          <div className="absolute inset-0 grid-lines opacity-40" aria-hidden="true" />
+          <div className="relative mx-auto max-w-2xl">
+            <h2 className="text-3xl font-bold sm:text-4xl">Have a project on the table?</h2>
+            <p className="mt-4 text-base opacity-85">
+              Share the scope and constraints. We will come back with a clear engineering approach,
+              programme and fee basis — no obligation.
+            </p>
+            <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-foreground px-7 py-3.5 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5"
+              >
+                Get a consultation <ArrowUpRight size={17} />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center justify-center rounded-full border border-primary-foreground/35 px-7 py-3.5 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
+              >
+                View all services
+              </Link>
+            </div>
           </div>
         </div>
       </section>
