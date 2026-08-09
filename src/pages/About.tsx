@@ -1,159 +1,174 @@
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Users, Award, Globe, Target, Linkedin } from 'lucide-react';
+import PageHero from '../components/PageHero';
+import { Globe2, Award, Users, Target, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const pillars = [
+  { icon: <Globe2 size={20} />, title: 'Global reach', text: 'Projects delivered across the UK, EMEA and West Africa.' },
+  { icon: <Award size={20} />, title: 'Assured quality', text: 'Independent design checks on every deliverable.' },
+  { icon: <Users size={20} />, title: 'Expert team', text: 'Chartered engineers embedded in client teams.' },
+  { icon: <Target size={20} />, title: 'Precision focus', text: 'Documentation that is buildable, not theoretical.' },
+];
+
+const leadership = [
+  {
+    name: 'David Bradley',
+    role: 'Chief Executive Officer',
+    image: '/lovable-uploads/9e19df9c-196f-46ab-83a8-fe128a060b5e.png',
+    bio: 'David brings over 25 years of engineering leadership, setting strategic direction and safeguarding technical standards across every sector we serve.',
+    credentials: ['M.Sc. Civil Engineering', 'Professional Engineer (PE)', '25+ years experience'],
+    linkedin:
+      'https://www.linkedin.com/in/charles-david-bradley-9b331323a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+  },
+  {
+    name: 'Henry Mason',
+    role: 'Director of Operations',
+    image: '/lovable-uploads/0e54afd2-4b20-4e48-9e13-ac523830e90d.png',
+    bio: 'Henry owns project execution and quality assurance across disciplines, keeping delivery on programme and on budget without compromising rigour.',
+    credentials: ['M.Sc. Project Management', 'PMP Certified', '18+ years experience'],
+  },
+];
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About Us
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Leading the future of engineering excellence with innovative solutions 
-            across diverse industries worldwide.
-          </p>
-        </div>
 
-        {/* Company Overview */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Company</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                DBC Consultancy stands at the forefront of civil engineering excellence, 
-                delivering comprehensive solutions across multiple industrial sectors. 
-                With decades of combined expertise, we specialize in complex engineering 
-                challenges that require innovative thinking and technical precision.
+      <PageHero
+        eyebrow="About DBC Consultancy"
+        title="An independent practice"
+        highlight="built on engineering rigour."
+        description="We are a civil and multidisciplinary engineering consultancy solving complex infrastructure problems with clear thinking, disciplined process and buildable design."
+      />
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">Our company</span>
+            <h2 className="mt-4 text-2xl font-bold text-foreground sm:text-3xl">
+              Multidisciplinary by design, accountable by default
+            </h2>
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+              <p>
+                DBC Consultancy delivers comprehensive civil engineering across construction, energy,
+                utilities and process industries. Decades of combined expertise let us take on
+                commissions that demand both innovative thinking and technical precision.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Our multidisciplinary approach ensures that every project benefits from 
-                our deep understanding of structural, environmental, and process engineering, 
-                making us the preferred partner for clients worldwide.
+              <p>
+                Every project benefits from our combined structural, environmental and process
+                engineering knowledge, coordinated through a single accountable design lead rather
+                than handed between disconnected teams.
               </p>
-              <p className="text-gray-600 leading-relaxed">
-                We are committed to sustainability, safety, and delivering projects that 
-                meet the highest industry standards while contributing to economic growth 
-                and environmental stewardship.
+              <p>
+                We are committed to sustainability, safety and delivering work that meets the highest
+                industry standards while contributing to lasting economic and environmental value.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center">
-                <div className="bg-blue-50 rounded-full p-4 w-16 h-16 mx-auto mb-3 flex items-center justify-center">
-                  <Globe className="text-blue-600" size={28} />
+          </div>
+
+          <div className="lg:col-span-5">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {pillars.map((p) => (
+                <div key={p.title} className="rounded-2xl border border-border bg-card p-5 shadow-soft">
+                  <div className="mb-3 inline-flex rounded-lg bg-secondary p-2.5 text-accent">{p.icon}</div>
+                  <h3 className="text-sm font-semibold text-foreground">{p.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{p.text}</p>
                 </div>
-                <p className="font-semibold text-gray-900">Global Reach</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-50 rounded-full p-4 w-16 h-16 mx-auto mb-3 flex items-center justify-center">
-                  <Award className="text-green-600" size={28} />
-                </div>
-                <p className="font-semibold text-gray-900">Award Winning</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-purple-50 rounded-full p-4 w-16 h-16 mx-auto mb-3 flex items-center justify-center">
-                  <Users className="text-purple-600" size={28} />
-                </div>
-                <p className="font-semibold text-gray-900">Expert Team</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-50 rounded-full p-4 w-16 h-16 mx-auto mb-3 flex items-center justify-center">
-                  <Target className="text-orange-600" size={28} />
-                </div>
-                <p className="font-semibold text-gray-900">Precision Focus</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
-            <p className="text-gray-700 leading-relaxed">
-              To provide world-class civil engineering solutions that drive innovation, 
-              ensure safety, and create sustainable value for our clients and communities. 
-              We are dedicated to excellence in every project we undertake.
+        <div className="mt-16 grid gap-5 md:grid-cols-2">
+          <div className="rounded-2xl border border-border bg-gradient-surface p-8 shadow-soft">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">Mission</span>
+            <p className="mt-4 text-base leading-relaxed text-foreground/80">
+              To provide world-class civil engineering solutions that drive innovation, ensure safety
+              and create sustainable value for our clients and the communities they serve.
             </p>
           </div>
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
-            <p className="text-gray-700 leading-relaxed">
-              To be the leading civil engineering consultancy globally, recognized for 
-              our technical expertise, innovative solutions, and commitment to building 
-              a better, more sustainable future through engineering excellence.
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-accent p-8 text-accent-foreground shadow-soft">
+            <div className="absolute inset-0 grid-lines opacity-40" aria-hidden="true" />
+            <div className="relative">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] opacity-80">Vision</span>
+              <p className="mt-4 text-base leading-relaxed opacity-95">
+                To be the engineering consultancy clients trust with their most complex
+                infrastructure — recognised for technical depth, clarity of delivery and a genuine
+                commitment to a more sustainable built environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-secondary/40 py-16 lg:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">Leadership</span>
+            <h2 className="mt-4 text-2xl font-bold text-foreground sm:text-3xl">The people accountable for your project</h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {leadership.map((l) => (
+              <article key={l.name} className="rounded-2xl border border-border bg-card p-7 shadow-soft">
+                <div className="flex items-center gap-5">
+                  <img
+                    src={l.image}
+                    alt={`${l.name}, ${l.role} at DBC Consultancy`}
+                    className="h-20 w-20 rounded-2xl object-cover"
+                    loading="lazy"
+                  />
+                  <div>
+                    <h3 className="font-display text-lg font-bold text-foreground">{l.name}</h3>
+                    <p className="text-sm font-medium text-accent">{l.role}</p>
+                  </div>
+                </div>
+                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{l.bio}</p>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {l.credentials.map((c) => (
+                    <li
+                      key={c}
+                      className="rounded-full bg-secondary px-3 py-1 text-[11px] font-medium uppercase tracking-[0.1em] text-secondary-foreground"
+                    >
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+                {l.linkedin && (
+                  <a
+                    href={l.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent"
+                  >
+                    <Linkedin size={16} /> Connect on LinkedIn
+                  </a>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-hero px-6 py-14 text-center text-primary-foreground sm:px-12">
+          <div className="absolute inset-0 grid-lines opacity-40" aria-hidden="true" />
+          <div className="relative mx-auto max-w-2xl">
+            <h2 className="text-2xl font-bold sm:text-3xl">Work with a team that owns the detail</h2>
+            <p className="mt-4 opacity-85">
+              Tell us about your project and we will set out a clear engineering approach, programme and fee basis.
             </p>
+            <Link
+              to="/contact"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary-foreground px-7 py-3.5 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5"
+            >
+              Get in touch <ArrowUpRight size={17} />
+            </Link>
           </div>
         </div>
+      </section>
 
-        {/* Leadership Team */}
-        <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Leadership Team</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            
-            {/* CEO */}
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-              <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/9e19df9c-196f-46ab-83a8-fe128a060b5e.png"
-                  alt="David Bradley"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">David Bradley</h3>
-              <p className="text-blue-600 font-semibold mb-4">Chief Executive Officer</p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                David brings over 25 years of engineering leadership experience, 
-                driving strategic vision and ensuring operational excellence across 
-                all sectors with his innovative approach to complex engineering challenges.
-              </p>
-              <div className="text-sm text-gray-500 space-y-1 mb-4">
-                <p>• M.Sc. Civil Engineering</p>
-                <p>• Professional Engineer (PE)</p>
-                <p>• 25+ Years Experience</p>
-              </div>
-              <a 
-                href="https://www.linkedin.com/in/charles-david-bradley-9b331323a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
-              >
-                <Linkedin size={20} />
-                <span>Connect on LinkedIn</span>
-              </a>
-            </div>
-
-            {/* Director of Operations */}
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-              <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/0e54afd2-4b20-4e48-9e13-ac523830e90d.png"
-                  alt="Henry Mason"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Henry Mason</h3>
-              <p className="text-green-600 font-semibold mb-4">Director of Operations</p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Henry oversees project execution and quality assurance across all 
-                engineering disciplines, ensuring projects are delivered on time and 
-                within budget while maintaining the highest standards of excellence.
-              </p>
-              <div className="text-sm text-gray-500 space-y-1">
-                <p>• M.Sc. Project Management</p>
-                <p>• PMP Certified</p>
-                <p>• 18+ Years Experience</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
       <Footer />
     </div>
   );
