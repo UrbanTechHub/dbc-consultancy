@@ -19,6 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				sans: ['DM Sans', 'system-ui', 'sans-serif'],
+				display: ['Space Grotesk', 'system-ui', 'sans-serif'],
 				'sackers': ['Sackers Gothic', 'sans-serif'],
 				'arvo': ['Arvo', 'serif'],
 				'playfair': ['Playfair Display', 'serif'],
@@ -50,6 +52,8 @@ export default {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
+				'primary-deep': 'hsl(var(--primary-deep))',
+				'primary-glow': 'hsl(var(--primary-glow))',
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
@@ -90,11 +94,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-up': {
+					from: { opacity: '0', transform: 'translateY(16px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-up': 'fade-up 0.7s ease-out both'
 			}
 		}
 	},
