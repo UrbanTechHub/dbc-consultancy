@@ -1,106 +1,123 @@
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import PageHero from '../components/PageHero';
 import ServiceCard from '../components/ServiceCard';
-import { Building2, Fuel, Zap, Beaker } from 'lucide-react';
+import { Building2, Fuel, Zap, Beaker, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const services = [
+  {
+    title: 'Building & Construction',
+    description:
+      'Structural and civil design for residential, commercial and industrial developments — concept through construction support.',
+    icon: <Building2 size={26} />,
+    link: '/services/building-construction',
+    index: '01',
+  },
+  {
+    title: 'Oil, Gas & Energy',
+    description:
+      'Upstream, midstream and downstream engineering, from platform structures to pipelines and renewable integration.',
+    icon: <Fuel size={26} />,
+    link: '/services/oil-gas-energy',
+    index: '02',
+  },
+  {
+    title: 'Power & Utilities',
+    description:
+      'Generation, transmission, distribution and smart-grid infrastructure delivered to grid-code standards.',
+    icon: <Zap size={26} />,
+    link: '/services/power-utilities',
+    index: '03',
+  },
+  {
+    title: 'Chemicals & Petrochemicals',
+    description:
+      'Process and plant engineering for chemical, petrochemical and specialty production facilities.',
+    icon: <Beaker size={26} />,
+    link: '/services/chemicals-petrochemicals',
+    index: '04',
+  },
+];
+
+const proof = [
+  { value: '25+', label: 'Years of experience' },
+  { value: '500+', label: 'Projects completed' },
+  { value: '100%', label: 'Chartered-led delivery' },
+];
+
+const process = [
+  { step: '01', title: 'Brief & feasibility', text: 'Constraints, standards and risk mapped before a line is drawn.' },
+  { step: '02', title: 'Concept & options', text: 'Comparative options with cost, programme and buildability tested.' },
+  { step: '03', title: 'Detailed design', text: 'Coordinated calculations, models and drawings, independently checked.' },
+  { step: '04', title: 'Delivery support', text: 'Site queries, inspections and as-built documentation to close out.' },
+];
 
 const Services = () => {
-  const services = [
-    {
-      title: "Building & Construction",
-      description: "Comprehensive structural engineering solutions for residential, commercial, and industrial construction projects of all scales.",
-      icon: <Building2 className="text-blue-600" size={28} />,
-      link: "/services/building-construction"
-    },
-    {
-      title: "Oil, Gas & Energy", 
-      description: "Advanced engineering solutions for upstream, midstream, and downstream operations in the oil, gas, and renewable energy sectors.",
-      icon: <Fuel className="text-orange-600" size={28} />,
-      link: "/services/oil-gas-energy"
-    },
-    {
-      title: "Power & Utilities",
-      description: "Comprehensive engineering solutions for power generation, transmission, distribution, and utility infrastructure projects worldwide.",
-      icon: <Zap className="text-yellow-600" size={28} />,
-      link: "/services/power-utilities"
-    },
-    {
-      title: "Chemicals & Petrochemicals",
-      description: "Specialized engineering solutions for chemical processing, petrochemical manufacturing, and specialty chemical production facilities.",
-      icon: <Beaker className="text-purple-600" size={28} />,
-      link: "/services/chemicals-petrochemicals"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            DBC Consultancy delivers comprehensive civil engineering solutions across 
-            diverse industries, combining technical expertise with innovative thinking.
-          </p>
-        </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              link={service.link}
-            />
+      <PageHero
+        eyebrow="Capabilities"
+        title="Engineering services"
+        highlight="across four sectors."
+        description="DBC Consultancy delivers multidisciplinary civil, structural and process engineering — one accountable team, one delivery standard, whatever the sector."
+      />
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="grid gap-5 md:grid-cols-2">
+          {services.map((s) => (
+            <ServiceCard key={s.title} {...s} />
           ))}
         </div>
 
-        {/* Why Choose Our Services Section */}
-        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose Us?
+        <div className="mt-16 rounded-3xl border border-border bg-gradient-surface p-8 shadow-soft sm:p-12">
+          <div className="max-w-2xl">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">How we work</span>
+            <h2 className="mt-4 text-2xl font-bold text-foreground sm:text-3xl">
+              A transparent four-stage delivery model
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We combine decades of engineering expertise with cutting-edge technology 
-              to deliver solutions that exceed expectations.
-            </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-blue-600">25+</span>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {process.map((p) => (
+              <div key={p.step} className="border-t border-border pt-5">
+                <span className="font-display text-xs tracking-[0.2em] text-accent">{p.step}</span>
+                <h3 className="mt-2 text-base font-semibold text-foreground">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Years of Experience</h3>
-              <p className="text-gray-600 text-sm">Proven track record across multiple industries</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-green-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-green-600">500+</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Projects Completed</h3>
-              <p className="text-gray-600 text-sm">Successfully delivered worldwide</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-purple-600">100%</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Client Satisfaction</h3>
-              <p className="text-gray-600 text-sm">Commitment to excellence in every project</p>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
-      
+
+        <dl className="mt-16 grid gap-5 sm:grid-cols-3">
+          {proof.map((p) => (
+            <div key={p.label} className="rounded-2xl border border-border bg-card p-7 text-center shadow-soft">
+              <dt className="font-display text-3xl font-bold text-foreground">{p.value}</dt>
+              <dd className="mt-2 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">{p.label}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-accent px-6 py-14 text-center text-accent-foreground sm:px-12">
+          <div className="absolute inset-0 grid-lines opacity-40" aria-hidden="true" />
+          <div className="relative mx-auto max-w-2xl">
+            <h2 className="text-2xl font-bold sm:text-3xl">Not sure which discipline you need?</h2>
+            <p className="mt-4 opacity-90">
+              Send us the scope. We will tell you exactly which engineering inputs your project requires.
+            </p>
+            <Link
+              to="/contact"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-card px-7 py-3.5 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5"
+            >
+              Talk to an engineer <ArrowUpRight size={17} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
