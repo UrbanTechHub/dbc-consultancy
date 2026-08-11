@@ -154,7 +154,7 @@ const Navigation = () => {
                 <Mail size={14} /> info@dbcconsultancy.com
               </p>
               <p className="flex items-center gap-2">
-                <MapPin size={14} /> 5 Brayford Square, London E1 0SG
+                <MapPin size={14} /> 4 Ocean Way, Southampton SO14 3JZ
               </p>
             </div>
           </div>
