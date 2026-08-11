@@ -10,7 +10,7 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = "DBC CONSULTANCY - Engineering Excellence Delivered",
+  title = "CDB CONSULTANTS - Engineering Excellence Delivered",
   description = "Leading civil engineering consultancy delivering innovative solutions across building construction, energy, utilities, and chemical industries worldwide.",
   keywords = "civil engineering, consultancy, building construction, oil gas energy, power utilities, chemical petrochemicals",
   canonical,

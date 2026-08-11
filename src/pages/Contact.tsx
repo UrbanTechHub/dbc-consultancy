@@ -1,7 +1,7 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import PageHero from '../components/PageHero';
-import { Mail, MapPin, Clock, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, Clock, Phone, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -128,14 +128,27 @@ const Contact = () => {
                 </li>
                 <li className="flex items-start gap-4">
                   <span className="inline-flex rounded-xl bg-card p-3 text-accent shadow-soft">
+                    <Phone size={20} />
+                  </span>
+                  <div className="text-sm">
+                    <h3 className="font-semibold text-foreground">Company number</h3>
+                    <a href="tel:+447441392088" className="block text-muted-foreground hover:text-accent">
+                      +44 7441 392088
+                    </a>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="inline-flex rounded-xl bg-card p-3 text-accent shadow-soft">
                     <MapPin size={20} />
                   </span>
                   <div className="text-sm">
                     <h3 className="font-semibold text-foreground">Office</h3>
                     <p className="text-muted-foreground">
-                      5 Brayford Square
+                      4 Ocean Way
                       <br />
-                      London, E1 0SG
+                      Southampton, SO14 3JZ
+                      <br />
+                      United Kingdom
                     </p>
                   </div>
                 </li>

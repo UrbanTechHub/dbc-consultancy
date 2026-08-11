@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import PageHero from '../components/PageHero';
 import { Globe2, Award, Users, Target, Linkedin, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ceoPortrait from '@/assets/ceo-portrait.jpg.asset.json';
 
 const pillars = [
   { icon: <Globe2 size={20} />, title: 'Global reach', text: 'Projects delivered across the UK, EMEA and West Africa.' },
@@ -15,7 +16,7 @@ const leadership = [
   {
     name: 'David Bradley',
     role: 'Chief Executive Officer',
-    image: '/lovable-uploads/9e19df9c-196f-46ab-83a8-fe128a060b5e.png',
+    image: ceoPortrait.url,
     bio: 'David brings over 25 years of engineering leadership, setting strategic direction and safeguarding technical standards across every sector we serve.',
     credentials: ['M.Sc. Civil Engineering', 'Professional Engineer (PE)', '25+ years experience'],
     linkedin:
@@ -36,7 +37,7 @@ const About = () => {
       <Navigation />
 
       <PageHero
-        eyebrow="About DBC Consultancy"
+        eyebrow="About CDB Consultants"
         title="An independent practice"
         highlight="built on engineering rigour."
         description="We are a civil and multidisciplinary engineering consultancy solving complex infrastructure problems with clear thinking, disciplined process and buildable design."
@@ -51,7 +52,7 @@ const About = () => {
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
-                DBC Consultancy delivers comprehensive civil engineering across construction, energy,
+                CDB Consultants delivers comprehensive civil engineering across construction, energy,
                 utilities and process industries. Decades of combined expertise let us take on
                 commissions that demand both innovative thinking and technical precision.
               </p>
@@ -115,7 +116,7 @@ const About = () => {
                 <div className="flex items-center gap-5">
                   <img
                     src={l.image}
-                    alt={`${l.name}, ${l.role} at DBC Consultancy`}
+                    alt={`${l.name}, ${l.role} at CDB Consultants`}
                     className="h-20 w-20 rounded-2xl object-cover"
                     loading="lazy"
                   />

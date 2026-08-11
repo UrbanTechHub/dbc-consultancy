@@ -62,7 +62,7 @@ const Services = () => {
         eyebrow="Capabilities"
         title="Engineering services"
         highlight="across four sectors."
-        description="DBC Consultancy delivers multidisciplinary civil, structural and process engineering — one accountable team, one delivery standard, whatever the sector."
+        description="CDB Consultants delivers multidisciplinary civil, structural and process engineering — one accountable team, one delivery standard, whatever the sector."
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
