@@ -16,7 +16,7 @@ const leadership = [
   {
     name: 'David Bradley',
     role: 'Chief Executive Officer',
-    image: '/lovable-uploads/9e19df9c-196f-46ab-83a8-fe128a060b5e.png',
+    image: ceoPortrait.url,
     bio: 'David brings over 25 years of engineering leadership, setting strategic direction and safeguarding technical standards across every sector we serve.',
     credentials: ['M.Sc. Civil Engineering', 'Professional Engineer (PE)', '25+ years experience'],
     linkedin:
