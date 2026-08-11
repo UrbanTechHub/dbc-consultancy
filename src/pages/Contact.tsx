@@ -118,11 +118,11 @@ const Contact = () => {
                   </span>
                   <div className="text-sm">
                     <h3 className="font-semibold text-foreground">Email</h3>
-                    <a href="mailto:info@dbcconsultancy.com" className="block text-muted-foreground hover:text-accent">
-                      info@dbcconsultancy.com
+                    <a href="mailto:info@cdbconsultants.uk" className="block text-muted-foreground hover:text-accent">
+                      info@cdbconsultants.uk
                     </a>
-                    <a href="mailto:projects@dbcconsultancy.com" className="block text-muted-foreground hover:text-accent">
-                      projects@dbcconsultancy.com
+                    <a href="mailto:projects@cdbconsultants.uk" className="block text-muted-foreground hover:text-accent">
+                      projects@cdbconsultants.uk
                     </a>
                   </div>
                 </li>
@@ -173,7 +173,7 @@ const Contact = () => {
                   standards and risk before you commit to a design route.
                 </p>
                 <a
-                  href="mailto:info@dbcconsultancy.com"
+                  href="mailto:info@cdbconsultants.uk"
                   className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 text-sm font-semibold text-primary"
                 >
                   Schedule a consultation <ArrowUpRight size={16} />
