@@ -11,12 +11,12 @@ const Footer = () => {
             <div className="mb-5 flex items-center gap-3">
               <img
                 src="/lovable-uploads/5eba8a70-e10e-4cd5-8394-2d1ff58de94d.png"
-                alt="DBC Consultancy logo"
+                alt="CDB Consultants logo"
                 className="h-11 w-auto"
                 loading="lazy"
               />
               <div>
-                <p className="font-display text-lg font-bold tracking-wide">DBC CONSULTANCY</p>
+                <p className="font-display text-lg font-bold tracking-wide">CDB CONSULTANTS</p>
                 <p className="text-xs uppercase tracking-[0.2em] opacity-70">Engineering Excellence Delivered</p>
               </div>
             </div>
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-primary-foreground/15 pt-6 text-xs opacity-70 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {new Date().getFullYear()} DBC Consultancy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} CDB Consultants. All rights reserved.</p>
           <p>Registered in England &amp; Wales</p>
         </div>
       </div>

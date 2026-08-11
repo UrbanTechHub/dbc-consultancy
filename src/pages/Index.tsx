@@ -74,7 +74,7 @@ const Index = () => {
                 <span className="block text-primary-foreground/70">complex infrastructure.</span>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed opacity-85 sm:text-lg">
-                DBC Consultancy provides civil, structural and multidisciplinary engineering
+                CDB Consultants provides civil, structural and multidisciplinary engineering
                 consultancy across construction, energy, utilities and process industries — precise
                 documentation, buildable design, dependable delivery.
               </p>

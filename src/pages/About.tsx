@@ -36,7 +36,7 @@ const About = () => {
       <Navigation />
 
       <PageHero
-        eyebrow="About DBC Consultancy"
+        eyebrow="About CDB Consultants"
         title="An independent practice"
         highlight="built on engineering rigour."
         description="We are a civil and multidisciplinary engineering consultancy solving complex infrastructure problems with clear thinking, disciplined process and buildable design."
@@ -51,7 +51,7 @@ const About = () => {
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
-                DBC Consultancy delivers comprehensive civil engineering across construction, energy,
+                CDB Consultants delivers comprehensive civil engineering across construction, energy,
                 utilities and process industries. Decades of combined expertise let us take on
                 commissions that demand both innovative thinking and technical precision.
               </p>
@@ -115,7 +115,7 @@ const About = () => {
                 <div className="flex items-center gap-5">
                   <img
                     src={l.image}
-                    alt={`${l.name}, ${l.role} at DBC Consultancy`}
+                    alt={`${l.name}, ${l.role} at CDB Consultants`}
                     className="h-20 w-20 rounded-2xl object-cover"
                     loading="lazy"
                   />

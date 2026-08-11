@@ -37,15 +37,15 @@ const Navigation = () => {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          <Link to="/" className="flex items-center gap-3" aria-label="DBC Consultancy home">
+          <Link to="/" className="flex items-center gap-3" aria-label="CDB Consultants home">
             <img
               src="/lovable-uploads/f9fd1225-357f-4466-950b-fbdff9000e66.png"
-              alt="DBC Consultancy logo"
+              alt="CDB Consultants logo"
               className="h-10 w-auto"
             />
             <span className="leading-tight">
               <span className="block font-display text-base font-bold tracking-[0.08em] text-primary sm:text-lg md:text-xl">
-                DBC CONSULTANCY
+                CDB CONSULTANTS
               </span>
               <span className="hidden text-[11px] uppercase tracking-[0.22em] text-muted-foreground sm:block">
                 Engineering Excellence Delivered
