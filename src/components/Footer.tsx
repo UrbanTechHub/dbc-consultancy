@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, ArrowUpRight } from 'lucide-react';
+import logo from '@/assets/cdb-consultancy-logo-white.png.asset.json';
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="mb-5 flex items-center gap-3">
               <img
-                src="/lovable-uploads/5eba8a70-e10e-4cd5-8394-2d1ff58de94d.png"
+                src={logo.url}
                 alt="CDB Consultants logo"
                 className="h-11 w-auto"
                 loading="lazy"
@@ -39,7 +40,7 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] opacity-70">Contact</h4>
             <ul className="space-y-3 text-sm opacity-90">
-              <li className="flex items-start gap-2"><Mail size={16} className="mt-0.5 shrink-0" />info@dbcconsultancy.com</li>
+              <li className="flex items-start gap-2"><Mail size={16} className="mt-0.5 shrink-0" />info@cdbconsultants.uk</li>
               <li className="flex items-start gap-2"><MapPin size={16} className="mt-0.5 shrink-0" /><span>4 Ocean Way<br />Southampton, SO14 3JZ</span></li>
             </ul>
             <Link to="/contact" className="mt-5 inline-flex items-center gap-1 text-sm font-medium underline underline-offset-4">
