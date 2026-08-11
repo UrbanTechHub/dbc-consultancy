@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import PageHero from '../components/PageHero';
 import { Globe2, Award, Users, Target, Linkedin, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ceoPortrait from '@/assets/ceo-portrait.jpg.asset.json';
 
 const pillars = [
   { icon: <Globe2 size={20} />, title: 'Global reach', text: 'Projects delivered across the UK, EMEA and West Africa.' },
