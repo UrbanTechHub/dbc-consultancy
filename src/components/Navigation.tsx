@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUpRight, Mail, MapPin } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import logo from '@/assets/cdb-consultancy-logo.png.asset.json';
 
 const links = [
   { to: '/', label: 'Home' },
@@ -39,7 +40,7 @@ const Navigation = () => {
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center gap-3" aria-label="CDB Consultants home">
             <img
-              src="/lovable-uploads/f9fd1225-357f-4466-950b-fbdff9000e66.png"
+              src={logo.url}
               alt="CDB Consultants logo"
               className="h-10 w-auto"
             />
@@ -151,7 +152,7 @@ const Navigation = () => {
 
             <div className="mt-6 space-y-2 text-xs opacity-75">
               <p className="flex items-center gap-2">
-                <Mail size={14} /> info@dbcconsultancy.com
+                <Mail size={14} /> info@cdbconsultants.uk
               </p>
               <p className="flex items-center gap-2">
                 <MapPin size={14} /> 4 Ocean Way, Southampton SO14 3JZ
