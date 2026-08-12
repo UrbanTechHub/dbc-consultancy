@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, ArrowUpRight } from 'lucide-react';
-import logo from '@/assets/cdb-consultancy-logo-white.png.asset.json';
+import logo from '@/assets/cdb-consultancy-logo-white.png';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="mb-5 flex items-center gap-3">
               <img
-                src={logo.url}
+                src={logo}
                 alt="CDB Consultants logo"
                 className="h-11 w-auto"
                 loading="lazy"
