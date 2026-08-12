@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import PageHero from '../components/PageHero';
 import { Globe2, Award, Users, Target, Linkedin, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import ceoPortrait from '@/assets/ceo-portrait.jpg.asset.json';
+import ceoPortrait from '@/assets/ceo-portrait.jpg';
 
 const pillars = [
   { icon: <Globe2 size={20} />, title: 'Global reach', text: 'Projects delivered across the UK, EMEA and West Africa.' },
@@ -16,7 +16,7 @@ const leadership = [
   {
     name: 'David Bradley',
     role: 'Chief Executive Officer',
-    image: ceoPortrait.url,
+    image: ceoPortrait,
     bio: 'David brings over 25 years of engineering leadership, setting strategic direction and safeguarding technical standards across every sector we serve.',
     credentials: ['M.Sc. Civil Engineering', 'Professional Engineer (PE)', '25+ years experience'],
     linkedin:

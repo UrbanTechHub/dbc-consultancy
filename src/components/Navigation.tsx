@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUpRight, Mail, MapPin } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import logo from '@/assets/cdb-consultancy-logo.png.asset.json';
+import logo from '@/assets/cdb-consultancy-logo.png';
 
 const links = [
   { to: '/', label: 'Home' },
@@ -40,7 +40,7 @@ const Navigation = () => {
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center gap-3" aria-label="CDB Consultants home">
             <img
-              src={logo.url}
+              src={logo}
               alt="CDB Consultants logo"
               className="h-10 w-auto"
             />
