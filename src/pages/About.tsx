@@ -14,7 +14,7 @@ const pillars = [
 
 const leadership = [
   {
-    name: 'David Bradley',
+    name: 'Charlie David Mason',
     role: 'Chief Executive Officer',
     image: ceoPortrait,
     bio: 'David brings over 25 years of engineering leadership, setting strategic direction and safeguarding technical standards across every sector we serve.',
@@ -23,7 +23,7 @@ const leadership = [
       'https://www.linkedin.com/in/charles-david-bradley-9b331323a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
   },
   {
-    name: 'Henry Mason',
+    name: 'Mathew Anderson',
     role: 'Director of Operations',
     image: '/lovable-uploads/0e54afd2-4b20-4e48-9e13-ac523830e90d.png',
     bio: 'Henry owns project execution and quality assurance across disciplines, keeping delivery on programme and on budget without compromising rigour.',
