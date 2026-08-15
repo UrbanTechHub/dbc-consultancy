@@ -2,11 +2,11 @@
 # Enable rewrite engine
 RewriteEngine On
 
-# Handle client-side routing for single page applications
-RewriteBase /
-
-# Handle Angular and React client-side routing
-RewriteRule ^(?!.*\.).*$ / [L]
+# Serve index.html for any non-file request (works in root or a subfolder)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^ index.html [L]
 
 # Cache static assets
 <IfModule mod_expires.c>
@@ -36,6 +36,6 @@ RewriteRule ^(?!.*\.).*$ / [L]
 # Security headers
 <IfModule mod_headers.c>
     Header always set X-Content-Type-Options nosniff
-    Header always set X-Frame-Options DENY
+    Header always set X-Frame-Options SAMEORIGIN
     Header always set X-XSS-Protection "1; mode=block"
 </IfModule>
